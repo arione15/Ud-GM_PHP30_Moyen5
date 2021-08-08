@@ -10,13 +10,6 @@ $titre = "Exercice 5 : private & getters"; //Mettre le nom du titre de la page q
         private $auteur;
         private $dateParution;
 
-        public function getEdition(){
-            return $this->edition;
-        }
-        public function getDateParution(){
-            return $this->dateParution;
-        }
-
         public function __construct($nom,$edition,$auteur,$dateParution){
             $this->nom = $nom;
             $this->edition = $edition;
@@ -24,6 +17,13 @@ $titre = "Exercice 5 : private & getters"; //Mettre le nom du titre de la page q
             $this->dateParution = $dateParution;
         }
 
+        public function getEdition(){
+            return $this->edition;
+        }
+        public function getDateParution(){
+            return $this->dateParution;
+        }
+        
         public function __toString(){
             $txt = "Nom : " . $this->nom. "<br />";
             $txt .= "Edition : " . $this->edition. "<br />";
